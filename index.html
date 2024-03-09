@@ -12,18 +12,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 
 <body>
     <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <i class="fa-brands fa-instagram navbar-brand">
+        <div class="container-fluid d-flex p-3 me-4">
+            <i class="fa-brands fa-instagram navbar-brand flex-grow-1">
                 Instagram
             </i>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                <i class="fa-regular fa-square-plus"></i>
+            <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Crear nuevo post
             </button>
             <!-- Modal -->
             <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -34,8 +35,12 @@
                             <h1 class="modal-title fs-5" id="staticBackdropLabel">Crear nuevo post</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
-                            ...
+                        <div class="modal-body p-2">
+                            <p><strong>Caption:</strong></p>
+                            <textarea class="mx-auto p-2 mb-1" name="content" cols="45"
+                                rows="2"> Agrega el contenido de tu foto</textarea>
+                            <i class="fa-solid fa-camera me-2"></i>
+                            <i class="fa-solid fa-location-dot"></i>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i
@@ -46,12 +51,13 @@
                     </div>
                 </div>
             </div>
+
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
-                    <i class="fa-regular fa-gear"></i>
+                    <i class="fa-solid fa-gear"></i>
                 </button>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item" href="#">Action</a></li>
                     <li><a class="dropdown-item" href="#">Another action</a></li>
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -60,20 +66,136 @@
 
         </div>
     </nav>
-    <div>
-        <ul class="nav  justify-content-center">
-            <li class="nav-item">
-                <a class="nav-link active bg-black text-white" aria-current="page" href="#">
-                    fbpm
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                type="button">
+                <i class="fa-solid fa-grip"></i>
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                type="button">
+                <i class="fa-solid fa-grip"></i>
+            </button>
+        </li>
+    </ul>
 
-        </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            <figure class="container text-center" class="figure">
+                <div class="row row-cols-3">
+                    <div class="col mb-3">
+                        <div class="card ">
+                            <img src="https://images.unsplash.com/photo-1525121577197-56ddc8d76c87?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bWluaW1hbHxlbnwwfHwwfHx8MA%3D%3D"
+                                class="card-img-top img-grid" alt="tunel">
+                        </div>
+                    </div>
 
-    </div>
+                    <div class="col mb-3">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1575226291244-25e8d23fa972?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWluaW1hbHxlbnwwfHwwfHx8MA%3D%3D"
+                                class="card-img-top img-grid" alt="pisaje">
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1615309662570-8c1ca68307d6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDJ8fG1pbmltYWx8ZW58MHx8MHx8fDA%3D"
+                                class="card-img-top img-grid" alt=" hombre sacando basura">
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card">
+                            <img src="https://plus.unsplash.com/premium_photo-1675827055694-010aef2cf08f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJhbGV6YXxlbnwwfHwwfHx8MA%3D%3D"
+                                class="img-grid" alt="Rio amazonas">
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJhbGV6YXxlbnwwfHwwfHx8MA%3D%3D"
+                                class="img-grid" alt="cascada de agua">
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJhbGV6YXxlbnwwfHwwfHx8MA%3D%3D"
+                                class="img-grid" alt="pisaje">
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card ">
+                            <img src="https://images.unsplash.com/photo-1555169062-013468b47731?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YW5pbWFsfGVufDB8fDB8fHww"
+                                class="card-img-top img-grid" alt="ave">
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card">
+                            <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YW5pbWFsfGVufDB8fDB8fHww"
+                                class="card-img-top img-grid" alt="leon">
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card">
+                            <img src="https://plus.unsplash.com/premium_photo-1675432656807-216d786dd468?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YW5pbWFsfGVufDB8fDB8fHww"
+                                class="card-img-top img-grid" alt="tortuga marina">
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <div class="tab-pane fade mx-auto" style=" height: auto;" id="profile-tab-pane" role="tabpanel"
+            aria-labelledby="profile-tab" tabindex="0"> df
+
+
+            <div>
+                <div class="p-2 mx-auto col col-sm-12 col-md-6">
+                    <div class="row row-cols-12 border border-2 light-subtle">
+                        <div class="d-flex justify-content-between">
+                            <h4>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </h4>
+                            <p class="h6">1/3</p>
+                        </div>
+                        <img class="img-responsive"
+                            src="https://tse4.mm.bing.net/th?id=OIP.dQ3vZFitsSYc1lq7STXI-wHaEK&pid=Api&P=0&h=180"
+                            alt="punta de lobos">
+                        <p class="h5"> 6500 like</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque dolorem eligendi
+                            voluptatem quo, vel et eaque, ad non sequi molestias ut quae, sint assumenda sit
+                            voluptates sunt aut excepturi..</p>
+                    </div>
+                    <div class="row row-cols-12 border border-2 light-subtle">
+                        <div class="d-flex justify-content-between">
+                            <h4>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </h4>
+                            <p class="h6">2/3</p>
+                        </div>
+                        <img class="img-responsive"
+                            src="https://images.unsplash.com/photo-1709714173314-8332e78010f1?q=80&w=2849&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="paisaje playa">
+                        <p class="h5"> 6500 like</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque dolorem eligendi
+                            voluptatem quo, vel et eaque, ad non sequi molestias ut quae, sint assumenda sit
+                            voluptates sunt aut excepturi..</p>
+                    </div>
+                    <div class="row row-cols-12 border border-2 light-subtle">
+                        <div class="d-flex justify-content-between">
+                            <h4>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </h4>
+                            <p class="h6">3/3</p>
+                        </div>
+                        <img class="img-responsive"
+                            src="https://tse4.mm.bing.net/th?id=OIP.tWCGWwn_kIzCWnexDK4IpQHaE7&pid=Api&P=0&h=180"
+                            alt="monumento batalla estrecho de magallanes">
+                        <p class="h5"> 400 like</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem cumque dolorem eligendi
+                            voluptatem quo, vel et eaque, ad non sequi molestias ut quae, sint assumenda sit
+                            voluptates sunt aut excepturi..</p>
+                    </div>
+                </div>
 </body>
 
 </html>
